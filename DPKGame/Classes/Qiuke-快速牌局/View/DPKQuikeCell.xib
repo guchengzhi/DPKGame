@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="quickCell" rowHeight="49" id="KGk-i7-Jjw" customClass="DPKQuikeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang_nan" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-Ea-Ifm">
+                        <rect key="frame" x="15" y="5" width="39" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="39" id="egX-jz-tRd"/>
+                            <constraint firstAttribute="width" constant="39" id="g7d-0i-8WS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="让她知道的牌局7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vc-w0-0fT">
+                        <rect key="frame" x="69" y="10" width="113.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23分钟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYI-iI-AF1">
+                        <rect key="frame" x="270" y="16" width="45" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72T-x9-SOS">
+                        <rect key="frame" x="0.0" y="49" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Xe7-dJ-KjP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Cqx-Ea-Ifm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0Sj-sF-nyg"/>
+                    <constraint firstItem="72T-x9-SOS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1bf-rZ-q5S"/>
+                    <constraint firstItem="5vc-w0-0fT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7aR-LI-keU"/>
+                    <constraint firstAttribute="bottom" secondItem="72T-x9-SOS" secondAttribute="bottom" id="IH4-wR-ehs"/>
+                    <constraint firstItem="Cqx-Ea-Ifm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M87-V1-Mae"/>
+                    <constraint firstItem="5vc-w0-0fT" firstAttribute="leading" secondItem="Cqx-Ea-Ifm" secondAttribute="trailing" constant="15" id="V73-6h-cnx"/>
+                    <constraint firstAttribute="trailing" secondItem="72T-x9-SOS" secondAttribute="trailing" id="YKH-CF-qDi"/>
+                    <constraint firstAttribute="trailing" secondItem="dYI-iI-AF1" secondAttribute="trailing" constant="5" id="l58-9Q-aG3"/>
+                    <constraint firstItem="dYI-iI-AF1" firstAttribute="centerY" secondItem="Cqx-Ea-Ifm" secondAttribute="centerY" id="ssW-jU-MFP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="262" y="310"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="touxiang_nan" width="57" height="57"/>
+    </resources>
+</document>

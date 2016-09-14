@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DPKZhuyeViewController">
+            <connections>
+                <outlet property="tableView" destination="Qvq-Ff-igW" id="hTZ-rL-DV0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhuye_di011_568h" translatesAutoresizingMaskIntoConstraints="NO" id="o90-nB-2hs">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCF-LL-jn7">
+                    <rect key="frame" x="24" y="60" width="125" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="aup-tU-FXM"/>
+                        <constraint firstAttribute="width" constant="125" id="wdb-i2-e4S"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" image="history_zujufang_normal_FT"/>
+                    <connections>
+                        <action selector="creatPaiJu:" destination="-1" eventType="touchUpInside" id="qc5-M8-nDX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-YZ-dSL">
+                    <rect key="frame" x="171" y="60" width="125" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" image="history_rujufang_normal-1"/>
+                </button>
+                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6r-0Z-T7V">
+                    <rect key="frame" x="0.0" y="143" width="320" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiantou_xia-1" translatesAutoresizingMaskIntoConstraints="NO" id="TGv-1r-hcG">
+                            <rect key="frame" x="147" y="7" width="26" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="Mld-WX-Wch"/>
+                                <constraint firstAttribute="width" constant="26" id="wXd-Bf-RUQ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803921568626" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="iyH-B6-2wI"/>
+                        <constraint firstItem="TGv-1r-hcG" firstAttribute="centerY" secondItem="K6r-0Z-T7V" secondAttribute="centerY" id="mYN-LG-glp"/>
+                        <constraint firstItem="TGv-1r-hcG" firstAttribute="centerX" secondItem="K6r-0Z-T7V" secondAttribute="centerX" id="uQr-im-SJE"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qvq-Ff-igW">
+                    <rect key="frame" x="0.0" y="173" width="320" height="395"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="60s-YX-zP0"/>
+                        <outlet property="delegate" destination="-1" id="v3l-3o-p63"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eAz-YZ-dSL" firstAttribute="height" secondItem="gCF-LL-jn7" secondAttribute="height" id="3nJ-yz-gOG"/>
+                <constraint firstAttribute="trailing" secondItem="Qvq-Ff-igW" secondAttribute="trailing" id="5T2-3q-gzf"/>
+                <constraint firstItem="o90-nB-2hs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6IP-cP-nKw"/>
+                <constraint firstAttribute="bottom" secondItem="Qvq-Ff-igW" secondAttribute="bottom" id="FCg-Au-4le"/>
+                <constraint firstItem="eAz-YZ-dSL" firstAttribute="width" secondItem="gCF-LL-jn7" secondAttribute="width" id="JI0-mV-ILr"/>
+                <constraint firstItem="o90-nB-2hs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LVX-mG-tsB"/>
+                <constraint firstItem="Qvq-Ff-igW" firstAttribute="top" secondItem="K6r-0Z-T7V" secondAttribute="bottom" id="Lsn-4Z-zzm"/>
+                <constraint firstItem="eAz-YZ-dSL" firstAttribute="centerY" secondItem="gCF-LL-jn7" secondAttribute="centerY" id="MfY-MV-dzB"/>
+                <constraint firstAttribute="bottom" secondItem="o90-nB-2hs" secondAttribute="bottom" id="Sko-cc-1be"/>
+                <constraint firstItem="gCF-LL-jn7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="TGb-s3-DdD"/>
+                <constraint firstAttribute="trailing" secondItem="o90-nB-2hs" secondAttribute="trailing" id="TeW-JP-lax"/>
+                <constraint firstAttribute="trailing" secondItem="K6r-0Z-T7V" secondAttribute="trailing" id="TxG-3Q-ZBe"/>
+                <constraint firstItem="Qvq-Ff-igW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cxa-Ic-xp5"/>
+                <constraint firstAttribute="trailing" secondItem="eAz-YZ-dSL" secondAttribute="trailing" constant="24" id="gUo-Zv-KyS"/>
+                <constraint firstItem="gCF-LL-jn7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="gcE-qI-O0K"/>
+                <constraint firstItem="K6r-0Z-T7V" firstAttribute="top" secondItem="eAz-YZ-dSL" secondAttribute="bottom" constant="50" id="qHo-sZ-spy"/>
+                <constraint firstItem="K6r-0Z-T7V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xFT-AA-gWB"/>
+            </constraints>
+            <point key="canvasLocation" x="495" y="390"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="history_rujufang_normal-1" width="125" height="33"/>
+        <image name="history_zujufang_normal_FT" width="125" height="33"/>
+        <image name="jiantou_xia-1" width="13" height="8"/>
+        <image name="zhuye_di011_568h" width="320" height="568"/>
+    </resources>
+</document>
