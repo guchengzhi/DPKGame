@@ -9,9 +9,17 @@
 
 
 #import <UIKit/UIKit.h>
+@class DPKBottomView;
+@protocol DPKBottomViewDelegate <NSObject>
+
+- (void)bottomView:(DPKBottomView *)bottomView selectedTimeStr:(NSString *)timeStr;
+
+@end
 
 @interface DPKBottomView : UIView
 
 + (instancetype)bottomView;
+
+@property (nonatomic,assign) id<DPKBottomViewDelegate>delegate;
 
 @end

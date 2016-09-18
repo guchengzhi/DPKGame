@@ -7,12 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DPKPaiJuViewController">
             <connections>
-                <outlet property="bottomView" destination="Eug-Ic-aXv" id="Ud1-HJ-PLJ"/>
                 <outlet property="cell1" destination="NVa-ft-Ea9" id="Bii-IO-vNc"/>
                 <outlet property="cell2" destination="Met-pZ-9JN" id="6hv-NC-OpG"/>
                 <outlet property="cell4" destination="fYL-lc-Lui" id="d2H-eC-wxA"/>
                 <outlet property="cell5" destination="5SM-wi-fDI" id="mr5-Fv-RWD"/>
-                <outlet property="slider" destination="xXj-Ev-ho6" id="oCa-jS-0Za"/>
+                <outlet property="paiJuName" destination="vSs-Ed-QJf" id="z7q-Er-9n9"/>
+                <outlet property="selButton" destination="9GA-gp-MlF" id="DIe-sS-KQE"/>
+                <outlet property="slider" destination="fG0-o4-Gyc" id="Ms6-5D-rb5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,7 @@
         <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
                 <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
@@ -52,7 +53,7 @@
             <color key="backgroundColor" red="0.073687435500516013" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="53" y="-78"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="161" id="Met-pZ-9JN">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="161" id="Met-pZ-9JN">
             <rect key="frame" x="0.0" y="0.0" width="320" height="161"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Met-pZ-9JN" id="zyi-H9-gp0">
@@ -121,13 +122,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="余额：5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nw-U2-PCm">
                         <rect key="frame" x="30" y="133" width="77" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.42745098039215684" green="0.49803921568627452" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务费：20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alH-an-voW">
                         <rect key="frame" x="237" y="133" width="73" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.42745098039215684" green="0.49803921568627452" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -151,7 +152,7 @@
             <color key="backgroundColor" red="0.073970124645252849" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="83" y="70.5"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fYL-lc-Lui">
+        <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fYL-lc-Lui">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fYL-lc-Lui" id="w3L-S8-A1t">
@@ -164,21 +165,40 @@
                         <color key="textColor" red="0.42745098039215684" green="0.49803921568627452" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="club_open" offImage="club_close" translatesAutoresizingMaskIntoConstraints="NO" id="7dB-SC-hIs">
-                        <rect key="frame" x="256" y="6.5" width="51" height="31"/>
-                    </switch>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-4E-VvD">
+                        <rect key="frame" x="0.0" y="43" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bdY-Ni-D2X"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-C9-mK5">
+                        <rect key="frame" x="255" y="4" width="55" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="8q1-Vh-Mjc"/>
+                            <constraint firstAttribute="height" constant="35" id="CHR-U0-oBW"/>
+                        </constraints>
+                        <state key="normal" image="club_close"/>
+                        <state key="selected" image="club_open"/>
+                        <connections>
+                            <action selector="switchButton:" destination="-1" eventType="touchUpInside" id="i6i-sz-h0C"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5xE-QT-8jh" firstAttribute="centerY" secondItem="w3L-S8-A1t" secondAttribute="centerY" id="LYj-de-pBQ"/>
+                    <constraint firstAttribute="bottom" secondItem="Ue1-4E-VvD" secondAttribute="bottom" id="Xrr-5c-c81"/>
                     <constraint firstItem="5xE-QT-8jh" firstAttribute="leading" secondItem="w3L-S8-A1t" secondAttribute="leading" constant="15" id="Yu5-zc-KRe"/>
-                    <constraint firstItem="7dB-SC-hIs" firstAttribute="centerY" secondItem="5xE-QT-8jh" secondAttribute="centerY" id="klI-6f-kiZ"/>
-                    <constraint firstAttribute="trailing" secondItem="7dB-SC-hIs" secondAttribute="trailing" constant="15" id="yrk-fs-xuW"/>
+                    <constraint firstItem="hyd-C9-mK5" firstAttribute="centerY" secondItem="5xE-QT-8jh" secondAttribute="centerY" id="aIE-Il-ZrD"/>
+                    <constraint firstAttribute="trailing" secondItem="Ue1-4E-VvD" secondAttribute="trailing" id="fP6-sX-c1h"/>
+                    <constraint firstAttribute="trailing" secondItem="hyd-C9-mK5" secondAttribute="trailing" constant="10" id="jjw-D2-CgO"/>
+                    <constraint firstItem="Ue1-4E-VvD" firstAttribute="leading" secondItem="w3L-S8-A1t" secondAttribute="leading" id="y2Y-Ry-VdL"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.074509803921568626" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="-9" y="243"/>
+            <point key="canvasLocation" x="83" y="236"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5SM-wi-fDI">
+        <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="5SM-wi-fDI">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5SM-wi-fDI" id="g3g-JW-cPD">
@@ -192,14 +212,23 @@
                         <state key="normal" title="保险模式" image="game_fangkuang_normal">
                             <color key="titleColor" red="0.42745098039215684" green="0.49803921568627452" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <state key="selected" image="game_fangkuang_press"/>
+                        <connections>
+                            <action selector="baoxianButton:" destination="-1" eventType="touchUpInside" id="8jx-f3-82T"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GA-gp-MlF">
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GA-gp-MlF">
                         <rect key="frame" x="177" y="4" width="133" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="8Y3-NW-eou"/>
                             <constraint firstAttribute="width" constant="133" id="v7t-57-R39"/>
                         </constraints>
-                        <state key="normal" image="game_fenchi_disable"/>
+                        <state key="normal" image="game_fenchi_normal"/>
+                        <state key="disabled" image="game_fenchi_disable"/>
+                        <state key="selected" image="game_fenchi_select"/>
+                        <connections>
+                            <action selector="clickSelButton:" destination="-1" eventType="touchUpInside" id="ed2-43-Py1"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -210,45 +239,17 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.074509803921568626" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="0.0" y="335"/>
+            <point key="canvasLocation" x="89" y="317"/>
         </tableViewCell>
-        <view contentMode="scaleToFill" id="Eug-Ic-aXv">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-Ev-ho6" customClass="DPKSlider">
-                    <rect key="frame" x="11.5" y="94" width="297" height="17"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="293" id="HmX-p1-BgG"/>
-                        <constraint firstAttribute="height" constant="16" id="Xza-Vg-WqC"/>
-                    </constraints>
-                </slider>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keI-xY-aPm">
-                    <rect key="frame" x="35" y="140" width="250" height="34"/>
-                    <color key="backgroundColor" red="0.6705882353" green="0.54117647059999996" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="250" id="RjX-ip-vvU"/>
-                    </constraints>
-                    <state key="normal" title="开始"/>
-                </button>
-            </subviews>
-            <color key="backgroundColor" red="0.1137254902" green="0.14117647059999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="keI-xY-aPm" secondAttribute="bottom" constant="10" id="Tci-00-xHT"/>
-                <constraint firstItem="keI-xY-aPm" firstAttribute="top" secondItem="xXj-Ev-ho6" secondAttribute="bottom" constant="30" id="cFF-9X-YA8"/>
-                <constraint firstItem="keI-xY-aPm" firstAttribute="centerX" secondItem="Eug-Ic-aXv" secondAttribute="centerX" id="fej-9b-GRi"/>
-                <constraint firstItem="xXj-Ev-ho6" firstAttribute="centerX" secondItem="Eug-Ic-aXv" secondAttribute="centerX" id="gRf-ut-iGa"/>
-            </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="104" y="474"/>
-        </view>
     </objects>
     <resources>
         <image name="chouma_icon" width="26" height="26"/>
         <image name="club_close" width="55" height="35"/>
         <image name="club_open" width="55" height="35"/>
         <image name="game_fangkuang_normal" width="23" height="19"/>
+        <image name="game_fangkuang_press" width="23" height="19"/>
         <image name="game_fenchi_disable" width="133" height="36"/>
+        <image name="game_fenchi_normal" width="133" height="36"/>
+        <image name="game_fenchi_select" width="133" height="36"/>
     </resources>
 </document>

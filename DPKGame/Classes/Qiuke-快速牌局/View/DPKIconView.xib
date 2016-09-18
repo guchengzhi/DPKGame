@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DPKIconView">
+            <rect key="frame" x="0.0" y="0.0" width="53" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G56-4M-NBt">
+                    <rect key="frame" x="0.0" y="0.0" width="53" height="17"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang_nan" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-qg-rLh">
+                    <rect key="frame" x="12" y="17" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="BXo-jN-AQw"/>
+                        <constraint firstAttribute="width" constant="28" id="M57-TG-8XA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="让她知道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntv-Lo-QHK">
+                    <rect key="frame" x="0.0" y="50.5" width="53" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="G56-4M-NBt" secondAttribute="trailing" id="UDV-Ab-dkh"/>
+                <constraint firstItem="G56-4M-NBt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X41-TY-9gq"/>
+                <constraint firstAttribute="trailing" secondItem="ntv-Lo-QHK" secondAttribute="trailing" id="eQM-rO-2TK"/>
+                <constraint firstItem="aK0-qg-rLh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hxh-3Q-SGD"/>
+                <constraint firstItem="aK0-qg-rLh" firstAttribute="top" secondItem="G56-4M-NBt" secondAttribute="bottom" id="mdC-hT-JOy"/>
+                <constraint firstItem="G56-4M-NBt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p3v-lD-kGu"/>
+                <constraint firstAttribute="bottom" secondItem="ntv-Lo-QHK" secondAttribute="bottom" id="rlf-Ao-US0"/>
+                <constraint firstItem="ntv-Lo-QHK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wA1-Qh-MTs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="243.5" y="72.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="touxiang_nan" width="57" height="57"/>
+    </resources>
+</document>

@@ -40,6 +40,39 @@
     
 }
 
+/**
+ *  拦截push,统一设置push的按钮
+ */
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
+        UIButton *btn = [[UIButton alloc]init];
+        // btn.backgroundColor = [UIColor redColor];
+        [btn setTitle:@"返回" forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"nav_backImage"] forState:UIControlStateNormal];
+        //[btn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+        btn.size = CGSizeMake(70, 20);
+        //按钮内部的内容所有的左对齐
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        //按钮的内容向左
+        btn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+        
+        [btn setTitleColor:DPKGRGBColor(171, 122, 49) forState:UIControlStateNormal];
+        //[btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+        [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    
+    [super pushViewController:viewController animated:animated];
+    
+}
+
+- (void)back {
+    [self popViewControllerAnimated:YES];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

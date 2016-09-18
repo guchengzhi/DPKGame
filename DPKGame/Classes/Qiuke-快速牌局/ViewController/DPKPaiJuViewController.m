@@ -9,8 +9,10 @@
 #import "DPKPaiJuViewController.h"
 #import "DPKBottomView.h"
 #import "DPKSlider.h"
+#import "DPKChatViewController.h"
+#import "DPKTabBarViewController.h"
 
-@interface DPKPaiJuViewController ()
+@interface DPKPaiJuViewController ()<DPKBottomViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableViewCell *cell1;
 
@@ -20,16 +22,16 @@
 
 @property (strong, nonatomic) IBOutlet UITableViewCell *cell5;
 
-
-@property (weak, nonatomic) IBOutlet DPKSlider *slider;
-
-
-@property (nonatomic,strong) NSArray *labelArr;
-@property (strong, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+//分池购买和快速购买按钮
+@property (weak, nonatomic) IBOutlet UIButton *selButton;
 
 //存放label的数组
 
 @property (nonatomic,strong) NSMutableArray *arr;
+
+//牌局的名字
+@property (weak, nonatomic) IBOutlet UITextField *paiJuName;
 
 
 @end
@@ -66,16 +68,44 @@
     
     //添加底部的bottomView
     
-    DPKBottomView *bottomView = [DPKBottomView bottomView];
-    
+    DPKBottomView *bottomView = [[DPKBottomView alloc]initWithFrame:CGRectMake(0, 0, DPKScreenW, 200)];
+    bottomView.delegate =self;
     self.tableView.tableFooterView = bottomView;
     
     
+    //设置slider
+    [self.slider setThumbImage:[UIImage imageNamed:@"chouma_icon"] forState:UIControlStateNormal];
     
+    //设置划过的颜色
+    [self.slider setMinimumTrackImage:[UIImage imageNamed:@"chouma02"] forState:UIControlStateNormal];
     
+    //设置未划过的颜色
+    [self.slider setMaximumTrackImage:[UIImage imageNamed:@"chouma01"] forState:UIControlStateNormal];
     
     
 }
+
+
+- (IBAction)switchButton:(UIButton *)sender {
+    
+    sender.selected = !sender.selected;
+}
+
+//点击保险模式
+- (IBAction)baoxianButton:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    
+    self.selButton.enabled = sender.selected;
+    
+}
+
+//点击分池购买或快速购买
+- (IBAction)clickSelButton:(UIButton *)sender {
+    
+    sender.selected = !sender.selected;
+    
+}
+
 
 - (void)clickButton {
     
@@ -128,7 +158,7 @@
     }else if(indexPath.section == 1){
         return 161;
     }else if (indexPath.section == 2){
-        return 44;
+        return 60;
     }
     
     return 0;
@@ -143,6 +173,21 @@
     }
     return 0;
 }
+
+#pragma  mark -- 点击开始的代理方法
+- (void)bottomView:(DPKBottomView *)bottomView selectedTimeStr:(NSString *)timeStr {
+    DPKLog(@"%@",timeStr);
+    
+    DPKChatViewController *chatVc = [[DPKChatViewController alloc]init];
+    chatVc.title = self.paiJuName.text;
+    DPKTabBarViewController *tabbar = (DPKTabBarViewController *)self.presentingViewController;
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [tabbar.selectedViewController  pushViewController:chatVc animated:YES];
+    
+    DPKLog(@"%@----------%@",self.presentationController,self.presentingViewController);
+   
+}
+
 
 
 

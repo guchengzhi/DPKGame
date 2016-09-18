@@ -16,6 +16,12 @@
 
 @property (weak, nonatomic) IBOutlet DPKSlider *slider;
 
+
+@property (nonatomic,strong) DPKSlider *bottomSlider;
+
+/**底部的按钮*/
+@property (nonatomic,strong) UIButton *bottomBtn;
+
 //存放label的数组
 
 @property (nonatomic,strong) NSMutableArray *arr;
@@ -38,21 +44,51 @@
     return _arr;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        CGFloat x = (DPKScreenW - 293) / 2;
+        self.bottomSlider = [[DPKSlider alloc]initWithFrame:CGRectMake(x, 90, 293, 16)];
+        [self addSubview:self.bottomSlider];
+        CGFloat y = CGRectGetMaxY(self.bottomSlider.frame) + 50;
+         x = (DPKScreenW - 250) / 2;
+        self.bottomBtn = [[UIButton alloc]initWithFrame:CGRectMake(x, y, 250, 34)];
+        self.bottomBtn.backgroundColor = DPKGRGBColor(171, 138, 71);
+        [self.bottomBtn setTitle:@"开始" forState:UIControlStateNormal];
+        self.bottomBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [self.bottomBtn addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.bottomBtn];
+        
+        [self setupBasic];
+    }
+    return self;
+}
+
+#pragma mark -- 点击开始按钮
+- (void)clickButton:(UIButton *)btn {
+    //选中的时长
+    NSString *str = self.labelArr[self.index];
+    
+    if ([self.delegate respondsToSelector:@selector(bottomView:selectedTimeStr:)]) {
+        [self.delegate bottomView:self selectedTimeStr:str];
+    }
+}
+
+
+
+- (void)setupBasic {
     //设置滑块的图片
-    [self.slider setThumbImage:[UIImage imageNamed:@"shijian_icon"] forState:UIControlStateNormal];
+    [self.bottomSlider setThumbImage:[UIImage imageNamed:@"shijian_icon"] forState:UIControlStateNormal];
     
     //设置划过的颜色
     
-    [self.slider setMinimumTrackImage:[UIImage imageNamed:@"game_shijian_select"] forState:UIControlStateNormal];
+    [self.bottomSlider setMinimumTrackImage:[UIImage imageNamed:@"game_shijian_select"] forState:UIControlStateNormal];
     
     //没划过的图片
-    [self.slider setMaximumTrackImage:[UIImage imageNamed:@"game_shijian_normal"] forState:UIControlStateNormal];
+    [self.bottomSlider setMaximumTrackImage:[UIImage imageNamed:@"game_shijian_normal"] forState:UIControlStateNormal];
     
-    [self.slider addTarget:self action:@selector(upadatThumbe:) forControlEvents:UIControlEventValueChanged];
+    [self.bottomSlider addTarget:self action:@selector(upadatThumbe:) forControlEvents:UIControlEventValueChanged];
     
-    self.slider.continuous = NO;
+    self.bottomSlider.continuous = NO;
     self.index = 0;
     
     self.labelArr = @[@"30分钟",@"1小时",@"1.5小时",@"2小时",@"3小时",@"4小时",@"6小时"];
@@ -60,11 +96,11 @@
     //创建label;
     [self setupLabel];
     
-    [self upadatThumbe:self.slider];
+    [self upadatThumbe:self.bottomSlider];
+    
 
-    
-    
 }
+
 
 
 //创建label
@@ -75,7 +111,7 @@
         label.tag = i;
         label.font = [UIFont systemFontOfSize:9];
         label.textColor = [UIColor whiteColor];
-        label.textAlignment = NSTextAlignmentCenter;
+        //label.textAlignment = NSTextAlignmentCenter;
         label.text = self.labelArr[i];
         [label sizeToFit];
         
@@ -93,7 +129,7 @@
     
     //每个节点的距离
     //CGRect rect = self.slider.frame;
-    CGFloat width = self.slider.width;
+    CGFloat width = self.bottomSlider.width;
 
     CGFloat perW = width /6;
     for (int i = 0; i < self.arr.count; i++) {
@@ -103,12 +139,12 @@
         
         label.text = self.labelArr[i];
         [label sizeToFit];
-        label.x = perW *i +10;
+        label.x = perW *i +self.bottomSlider.x *0.65;
         if (self.index == label.tag) {//选中
-            label.y = self.slider.y-label.height-20;
+            label.y = self.bottomSlider.y-label.height-30;
             label.backgroundColor = [UIColor blackColor];
         }else {//未选中
-            label.y = self.slider.y-label.height-10;
+            label.y = self.bottomSlider.y-label.height-20;
             label.backgroundColor = [UIColor clearColor];
             
         }
@@ -123,7 +159,7 @@
     
     //获取slider的宽度
     //CGRect rect = slider.frame;
-    CGFloat width = self.slider.width;
+    CGFloat width = self.bottomSlider.width;
    
     CGFloat perW = width /6;
     
