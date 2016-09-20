@@ -62,10 +62,11 @@
      */
     [self setupChildVc:[[DPKMeViewController alloc]init] title:@"我" imageName:@"tabbar_icon_wo_normal" selectedImageName:@"tabbar_icon_wo_press"];
     
-
-    [self setValue:[[DPKTabBar alloc]init] forKeyPath:@"tabBar"];
+    DPKTabBar *tabBar = [[DPKTabBar alloc]init];
+    [self setValue:tabBar forKeyPath:@"tabBar"];
     
-    
+   
+    [self tabBar:tabBar didClickButton:nil];
     
 }
 

@@ -22,7 +22,7 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
   DPKTabBarViewController *tabBar = [[DPKTabBarViewController alloc] init];
-    
+  
     // 设置窗口的根控制器
     self.window.rootViewController = tabBar;
     

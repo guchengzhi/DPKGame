@@ -14,6 +14,15 @@
 		D106DA761D8E7EEC009414A6 /* DPKRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA741D8E7EEC009414A6 /* DPKRightViewController.m */; };
 		D106DA771D8E7EEC009414A6 /* DPKRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA751D8E7EEC009414A6 /* DPKRightViewController.xib */; };
 		D106DA7A1D8E8A5D009414A6 /* DPKCoverButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA791D8E8A5D009414A6 /* DPKCoverButton.m */; };
+		D106DA821D8EB63B009414A6 /* DPKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA801D8EB63B009414A6 /* DPKLoginViewController.m */; };
+		D106DA831D8EB63B009414A6 /* DPKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA811D8EB63B009414A6 /* DPKLoginViewController.xib */; };
+		D106DA861D8EE99B009414A6 /* DPKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA851D8EE99B009414A6 /* DPKTextField.m */; };
+		D106DA8A1D8FD498009414A6 /* DPKZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA881D8FD498009414A6 /* DPKZhuCeViewController.m */; };
+		D106DA8B1D8FD498009414A6 /* DPKZhuCeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA891D8FD498009414A6 /* DPKZhuCeViewController.xib */; };
+		D106DA8F1D8FEB6B009414A6 /* DPKGetYanZhenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA8D1D8FEB6B009414A6 /* DPKGetYanZhenViewController.m */; };
+		D106DA901D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA8E1D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib */; };
+		D106DA941D8FF02E009414A6 /* DPKFinishZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA921D8FF02E009414A6 /* DPKFinishZhuCeViewController.m */; };
+		D106DA951D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA931D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib */; };
 		D162E4071D84526500EF746B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D162E3FD1D84526500EF746B /* AppDelegate.m */; };
 		D162E40A1D8452CE00EF746B /* DPKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162E4091D8452CE00EF746B /* DPKTabBarViewController.m */; };
 		D162E41D1D8455A400EF746B /* DPKResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162E41B1D8455A400EF746B /* DPKResultViewController.m */; };
@@ -57,6 +66,7 @@
 		D1E51E2F1D88F679002CF154 /* UIBarButtonItem+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E51E2E1D88F679002CF154 /* UIBarButtonItem+Common.m */; };
 		D1E51E7C1D894118002CF154 /* DPKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E51E7B1D894118002CF154 /* DPKSlider.m */; };
 		D1E51E801D895A22002CF154 /* DPKBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E51E7E1D895A22002CF154 /* DPKBottomView.m */; };
+		D1E9298B1D910B2E00A77D57 /* DPKMeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E9298A1D910B2E00A77D57 /* DPKMeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +100,20 @@
 		D106DA751D8E7EEC009414A6 /* DPKRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKRightViewController.xib; sourceTree = "<group>"; };
 		D106DA781D8E8A5D009414A6 /* DPKCoverButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKCoverButton.h; sourceTree = "<group>"; };
 		D106DA791D8E8A5D009414A6 /* DPKCoverButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKCoverButton.m; sourceTree = "<group>"; };
+		D106DA7F1D8EB63B009414A6 /* DPKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKLoginViewController.h; sourceTree = "<group>"; };
+		D106DA801D8EB63B009414A6 /* DPKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKLoginViewController.m; sourceTree = "<group>"; };
+		D106DA811D8EB63B009414A6 /* DPKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKLoginViewController.xib; sourceTree = "<group>"; };
+		D106DA841D8EE99B009414A6 /* DPKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKTextField.h; sourceTree = "<group>"; };
+		D106DA851D8EE99B009414A6 /* DPKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKTextField.m; sourceTree = "<group>"; };
+		D106DA871D8FD498009414A6 /* DPKZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKZhuCeViewController.h; sourceTree = "<group>"; };
+		D106DA881D8FD498009414A6 /* DPKZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKZhuCeViewController.m; sourceTree = "<group>"; };
+		D106DA891D8FD498009414A6 /* DPKZhuCeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKZhuCeViewController.xib; sourceTree = "<group>"; };
+		D106DA8C1D8FEB6B009414A6 /* DPKGetYanZhenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKGetYanZhenViewController.h; sourceTree = "<group>"; };
+		D106DA8D1D8FEB6B009414A6 /* DPKGetYanZhenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKGetYanZhenViewController.m; sourceTree = "<group>"; };
+		D106DA8E1D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKGetYanZhenViewController.xib; sourceTree = "<group>"; };
+		D106DA911D8FF02E009414A6 /* DPKFinishZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKFinishZhuCeViewController.h; sourceTree = "<group>"; };
+		D106DA921D8FF02E009414A6 /* DPKFinishZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKFinishZhuCeViewController.m; sourceTree = "<group>"; };
+		D106DA931D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKFinishZhuCeViewController.xib; sourceTree = "<group>"; };
 		D162E3FC1D84526500EF746B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D162E3FD1D84526500EF746B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D162E4081D8452CE00EF746B /* DPKTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKTabBarViewController.h; sourceTree = "<group>"; };
@@ -165,6 +189,8 @@
 		D1E51E7B1D894118002CF154 /* DPKSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKSlider.m; sourceTree = "<group>"; };
 		D1E51E7D1D895A22002CF154 /* DPKBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKBottomView.h; sourceTree = "<group>"; };
 		D1E51E7E1D895A22002CF154 /* DPKBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKBottomView.m; sourceTree = "<group>"; };
+		D1E929891D910B2E00A77D57 /* DPKMeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKMeButton.h; sourceTree = "<group>"; };
+		D1E9298A1D910B2E00A77D57 /* DPKMeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKMeButton.m; sourceTree = "<group>"; };
 		DBA0ECC947ABEA956C356443 /* Pods-DPKGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DPKGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-DPKGame/Pods-DPKGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +237,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D106DA7B1D8EB618009414A6 /* Login-登录界面 */ = {
+			isa = PBXGroup;
+			children = (
+				D106DA7C1D8EB618009414A6 /* Model */,
+				D106DA7D1D8EB618009414A6 /* View */,
+				D106DA7E1D8EB618009414A6 /* ViewController */,
+			);
+			path = "Login-登录界面";
+			sourceTree = "<group>";
+		};
+		D106DA7C1D8EB618009414A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D106DA7D1D8EB618009414A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D106DA841D8EE99B009414A6 /* DPKTextField.h */,
+				D106DA851D8EE99B009414A6 /* DPKTextField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D106DA7E1D8EB618009414A6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D106DA7F1D8EB63B009414A6 /* DPKLoginViewController.h */,
+				D106DA801D8EB63B009414A6 /* DPKLoginViewController.m */,
+				D106DA811D8EB63B009414A6 /* DPKLoginViewController.xib */,
+				D106DA871D8FD498009414A6 /* DPKZhuCeViewController.h */,
+				D106DA881D8FD498009414A6 /* DPKZhuCeViewController.m */,
+				D106DA891D8FD498009414A6 /* DPKZhuCeViewController.xib */,
+				D106DA8C1D8FEB6B009414A6 /* DPKGetYanZhenViewController.h */,
+				D106DA8D1D8FEB6B009414A6 /* DPKGetYanZhenViewController.m */,
+				D106DA8E1D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib */,
+				D106DA911D8FF02E009414A6 /* DPKFinishZhuCeViewController.h */,
+				D106DA921D8FF02E009414A6 /* DPKFinishZhuCeViewController.m */,
+				D106DA931D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D162E3EC1D84526500EF746B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +292,7 @@
 				D162E3F71D84526500EF746B /* News-通讯 */,
 				D162E3FB1D84526500EF746B /* other-其他 */,
 				D162E3FF1D84526500EF746B /* Qiuke-快速牌局 */,
+				D106DA7B1D8EB618009414A6 /* Login-登录界面 */,
 				D162E4031D84526500EF746B /* Result-战绩 */,
 				D162E4341D8463B600EF746B /* public.pch */,
 			);
@@ -307,6 +379,8 @@
 		D162E3F51D84526500EF746B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1E929891D910B2E00A77D57 /* DPKMeButton.h */,
+				D1E9298A1D910B2E00A77D57 /* DPKMeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,15 +728,19 @@
 			files = (
 				D1E51E241D885266002CF154 /* DPKQuikeCell.xib in Resources */,
 				D19D9F121D8CCDD00084AE3C /* DPKChatViewController.xib in Resources */,
+				D106DA951D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib in Resources */,
 				D1CD59821D816E5100DD06C7 /* LaunchScreen.storyboard in Resources */,
+				D106DA831D8EB63B009414A6 /* DPKLoginViewController.xib in Resources */,
 				D1E51E291D8856C3002CF154 /* DPKPaiJuViewController.xib in Resources */,
 				D19D9F221D8D69630084AE3C /* DPKIconView.xib in Resources */,
 				D1E51E1F1D87A9A8002CF154 /* DPKNewsViewController.xib in Resources */,
 				D162E4391D84658500EF746B /* DPKZhuyeViewController.xib in Resources */,
+				D106DA8B1D8FD498009414A6 /* DPKZhuCeViewController.xib in Resources */,
 				D106DA771D8E7EEC009414A6 /* DPKRightViewController.xib in Resources */,
 				D19D9F1A1D8D3B7E0084AE3C /* DPKGameViewController.xib in Resources */,
 				D1E51E091D86E1AB002CF154 /* DPKXinShouCell.xib in Resources */,
 				D162E4231D8455BC00EF746B /* DPKMeViewController.xib in Resources */,
+				D106DA901D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib in Resources */,
 				D162E41E1D8455A400EF746B /* DPKResultViewController.xib in Resources */,
 				D1E51DFF1D86D9B6002CF154 /* DPKItemViewCell.xib in Resources */,
 				D1CD597F1D816E5100DD06C7 /* Assets.xcassets in Resources */,
@@ -743,24 +821,30 @@
 				D1E51E141D87A15A002CF154 /* DPKButton.m in Sources */,
 				D106DA761D8E7EEC009414A6 /* DPKRightViewController.m in Sources */,
 				D162E4331D84624300EF746B /* UIView+Extension.m in Sources */,
+				D106DA941D8FF02E009414A6 /* DPKFinishZhuCeViewController.m in Sources */,
 				D1E51DF41D86D7E6002CF154 /* DPKFindViewController.m in Sources */,
 				D106DA7A1D8E8A5D009414A6 /* DPKCoverButton.m in Sources */,
 				D162E4071D84526500EF746B /* AppDelegate.m in Sources */,
 				D1E51E7C1D894118002CF154 /* DPKSlider.m in Sources */,
+				D1E9298B1D910B2E00A77D57 /* DPKMeButton.m in Sources */,
 				D162E4301D8460CA00EF746B /* DPKTabBar.m in Sources */,
 				D1E51DF01D86D601002CF154 /* UIImage+Common.m in Sources */,
 				D1E51DFE1D86D9B6002CF154 /* DPKItemViewCell.m in Sources */,
+				D106DA821D8EB63B009414A6 /* DPKLoginViewController.m in Sources */,
 				D1E51E081D86E1AB002CF154 /* DPKXinShouCell.m in Sources */,
 				D1E51E151D87A15A002CF154 /* DPKTopViewCell.m in Sources */,
 				D1E51E191D87A38C002CF154 /* DPKNewsCell.m in Sources */,
+				D106DA861D8EE99B009414A6 /* DPKTextField.m in Sources */,
 				D162E4381D84658500EF746B /* DPKZhuyeViewController.m in Sources */,
 				D1E51E231D885266002CF154 /* DPKQuikeCell.m in Sources */,
 				D1E51E281D8856C3002CF154 /* DPKPaiJuViewController.m in Sources */,
+				D106DA8A1D8FD498009414A6 /* DPKZhuCeViewController.m in Sources */,
 				D1CD59741D816E5100DD06C7 /* main.m in Sources */,
 				D1E51E2F1D88F679002CF154 /* UIBarButtonItem+Common.m in Sources */,
 				D106DA6C1D8E3390009414A6 /* NirKxMenu.m in Sources */,
 				D19D9F191D8D3B7E0084AE3C /* DPKGameViewController.m in Sources */,
 				D162E4221D8455BC00EF746B /* DPKMeViewController.m in Sources */,
+				D106DA8F1D8FEB6B009414A6 /* DPKGetYanZhenViewController.m in Sources */,
 				D19D9F111D8CCDD00084AE3C /* DPKChatViewController.m in Sources */,
 				D19D9F201D8D69510084AE3C /* DPKIconView.m in Sources */,
 				D106DA6F1D8E61A2009414A6 /* DPKItemView.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "DPKFindViewController.h"
 #import "DPKXinShouCell.h"
+#import "DPKLoginViewController.h"
 
 @interface DPKFindViewController ()
 
@@ -35,6 +36,14 @@
     
     self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0);
     
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem getRightUIBarButtonItem:@"登录" target:self action:@selector(login)];
+    
+}
+
+- (void)login {
+    DPKLoginViewController *loginVc = [[DPKLoginViewController alloc]init];
+    
+    [self presentViewController:loginVc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

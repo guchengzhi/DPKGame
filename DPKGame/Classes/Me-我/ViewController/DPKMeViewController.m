@@ -7,8 +7,14 @@
 //
 
 #import "DPKMeViewController.h"
+#import "DPKMeButton.h"
 
 @interface DPKMeViewController ()
+
+/**背景图片*/
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+/**顶部的图片*/
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 
 @end
 
@@ -16,13 +22,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    //创建按钮
+    [self setupButton];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+/**创建按钮*/
+- (void)setupButton {
+    //图片的数组
+    NSArray *picArr = @[@"icon_paipu_01",@"me_icon_undezhouquan",@"me_icon_fenxiang-1",@"me_icon_shangdian",@"me_icon_kefu",@"me_icon_shezhi"];
+    NSArray *titleArr = @[@"牌谱收藏",@"我的德州圈",@"分享德州圈",@"商店",@"客服",@"设置"];
+    //一行最多3列
+    NSInteger maxCols = 3;
+    //按钮的宽度
+    CGFloat btnW = DPKScreenW / maxCols;
+    CGFloat btnH = 110;
+    
+    CGFloat btnY = CGRectGetMaxY(self.topImageView.frame);
+    for (int i = 0; i < 6; i++) {
+        DPKMeButton *meBtn = [[DPKMeButton alloc]init];
+        meBtn.backgroundColor = [UIColor blackColor];
+        //meBtn.backgroundColor = [UIColor redColor];
+        [meBtn setTitle:titleArr[i] forState:UIControlStateNormal];
+        [meBtn setImage:[UIImage imageNamed:picArr[i]] forState:UIControlStateNormal];
+        
+     
+        //计算frame
+        NSInteger col = i % maxCols;
+        NSInteger row = i / maxCols;
+        
+        meBtn.x = col *(btnW+1);
+        meBtn.y = row *(btnH+1) + btnY;
+        meBtn.width = btnW;
+        meBtn.height = btnH;
+        
+        
+        [self.bgImageView addSubview:meBtn];
+        if (i == 1) {
+            UIImage *img = [UIImage imageNamed:@"weikaifang"];
+            UIImageView *iv = [[UIImageView alloc]initWithImage:img];
+            [self.bgImageView addSubview:iv];
+             iv.center = meBtn.center;
+           iv.x = btnW*2 - iv.width;
+          ;
+            
+            
+           
+            //iv.backgroundColor = [UIColor redColor];
+           
+        }
+
+    }
+    
+    
+    
+    
 }
+
+
 
 /*
 #pragma mark - Navigation

@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DPKMeViewController">
             <connections>
+                <outlet property="bgImageView" destination="eGu-z9-Vtw" id="Kmo-a7-REy"/>
+                <outlet property="topImageView" destination="WWn-WY-3eo" id="o3K-Zh-om1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +20,56 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhuce_di011_667h" translatesAutoresizingMaskIntoConstraints="NO" id="eGu-z9-Vtw">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="WWn-WY-3eo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="202" id="6Jh-A1-nsL"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang_nan" translatesAutoresizingMaskIntoConstraints="NO" id="ZSC-8n-esA">
+                    <rect key="frame" x="132.5" y="35" width="54" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="FjB-TE-vcY"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xbnv" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-Ua-Eda">
+                    <rect key="frame" x="170" y="73" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="Q3N-Ox-dWx"/>
+                        <constraint firstAttribute="height" constant="16" id="xNh-r7-N4t"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这样才算好" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjy-gO-V5z">
+                    <rect key="frame" x="117" y="97" width="85" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="g0c-Ua-Eda" firstAttribute="leading" secondItem="ZSC-8n-esA" secondAttribute="leading" constant="38" id="1fV-j7-LB3"/>
                 <constraint firstItem="eGu-z9-Vtw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BnI-NH-yKC"/>
+                <constraint firstItem="WWn-WY-3eo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="J5k-Tc-BRP"/>
+                <constraint firstItem="tjy-gO-V5z" firstAttribute="top" secondItem="ZSC-8n-esA" secondAttribute="bottom" constant="5" id="Qoe-oo-2ZR"/>
+                <constraint firstAttribute="trailing" secondItem="WWn-WY-3eo" secondAttribute="trailing" id="S7J-iR-smD"/>
+                <constraint firstItem="ZSC-8n-esA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="Wam-f5-r5T"/>
+                <constraint firstItem="g0c-Ua-Eda" firstAttribute="bottom" secondItem="ZSC-8n-esA" secondAttribute="bottom" constant="-3" id="Y4z-KD-DgM"/>
+                <constraint firstItem="tjy-gO-V5z" firstAttribute="centerX" secondItem="ZSC-8n-esA" secondAttribute="centerX" id="bAB-kY-dCC"/>
+                <constraint firstItem="g0c-Ua-Eda" firstAttribute="trailing" secondItem="ZSC-8n-esA" secondAttribute="trailing" id="cDc-g6-Zh7"/>
                 <constraint firstAttribute="bottom" secondItem="eGu-z9-Vtw" secondAttribute="bottom" id="j3D-Q1-ufA"/>
+                <constraint firstItem="ZSC-8n-esA" firstAttribute="centerX" secondItem="WWn-WY-3eo" secondAttribute="centerX" id="lcp-p1-zP3"/>
                 <constraint firstAttribute="trailing" secondItem="eGu-z9-Vtw" secondAttribute="trailing" id="njm-1J-aQN"/>
+                <constraint firstItem="WWn-WY-3eo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uqm-CC-oxm"/>
                 <constraint firstItem="eGu-z9-Vtw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ztw-Hq-jZe"/>
             </constraints>
             <point key="canvasLocation" x="323" y="370"/>
         </view>
     </objects>
     <resources>
+        <image name="me_beijing" width="320" height="202"/>
+        <image name="touxiang_nan" width="57" height="57"/>
+        <image name="xbnv" width="16" height="16"/>
         <image name="zhuce_di011_667h" width="375" height="667"/>
     </resources>
 </document>
