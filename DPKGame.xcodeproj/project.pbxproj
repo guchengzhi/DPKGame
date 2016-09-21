@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1626441D928BE4008E3DA8 /* DPK_NW_Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626331D928BE4008E3DA8 /* DPK_NW_Application.m */; };
+		1A1626451D928BE4008E3DA8 /* DPKTCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626351D928BE4008E3DA8 /* DPKTCPSocket.m */; };
+		1A1626461D928BE4008E3DA8 /* GameObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626371D928BE4008E3DA8 /* GameObjectModel.m */; };
+		1A1626471D928BE4008E3DA8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626391D928BE4008E3DA8 /* GCDAsyncSocket.m */; };
+		1A1626481D928BE4008E3DA8 /* LocalUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A16263B1D928BE4008E3DA8 /* LocalUserModel.m */; };
+		1A1626491D928BE4008E3DA8 /* PaiJuInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626411D928BE4008E3DA8 /* PaiJuInfoModel.m */; };
 		8613A7FB04527E5500EECC55 /* libPods-DPKGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2598A1B2635EC0C87E0AD1D4 /* libPods-DPKGame.a */; };
 		D106DA6C1D8E3390009414A6 /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA6B1D8E3390009414A6 /* NirKxMenu.m */; };
 		D106DA6F1D8E61A2009414A6 /* DPKItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA6E1D8E61A2009414A6 /* DPKItemView.m */; };
@@ -87,6 +93,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1626321D928BE4008E3DA8 /* DPK_NW_Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPK_NW_Application.h; sourceTree = "<group>"; };
+		1A1626331D928BE4008E3DA8 /* DPK_NW_Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPK_NW_Application.m; sourceTree = "<group>"; };
+		1A1626341D928BE4008E3DA8 /* DPKTCPSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKTCPSocket.h; sourceTree = "<group>"; };
+		1A1626351D928BE4008E3DA8 /* DPKTCPSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKTCPSocket.m; sourceTree = "<group>"; };
+		1A1626361D928BE4008E3DA8 /* GameObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObjectModel.h; sourceTree = "<group>"; };
+		1A1626371D928BE4008E3DA8 /* GameObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObjectModel.m; sourceTree = "<group>"; };
+		1A1626381D928BE4008E3DA8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		1A1626391D928BE4008E3DA8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1A16263A1D928BE4008E3DA8 /* LocalUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserModel.h; sourceTree = "<group>"; };
+		1A16263B1D928BE4008E3DA8 /* LocalUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserModel.m; sourceTree = "<group>"; };
+		1A16263C1D928BE4008E3DA8 /* message_command_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_command_common.h; sourceTree = "<group>"; };
+		1A16263D1D928BE4008E3DA8 /* message_command_videochat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_command_videochat.h; sourceTree = "<group>"; };
+		1A16263E1D928BE4008E3DA8 /* message_defines_command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_defines_command.h; sourceTree = "<group>"; };
+		1A16263F1D928BE4008E3DA8 /* message_defines_videochat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_defines_videochat.h; sourceTree = "<group>"; };
+		1A1626401D928BE4008E3DA8 /* PaiJuInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaiJuInfoModel.h; sourceTree = "<group>"; };
+		1A1626411D928BE4008E3DA8 /* PaiJuInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaiJuInfoModel.m; sourceTree = "<group>"; };
+		1A1626421D928BE4008E3DA8 /* yc_datatypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yc_datatypes.h; sourceTree = "<group>"; };
+		1A1626431D928BE4008E3DA8 /* yc_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yc_defines.h; sourceTree = "<group>"; };
 		2598A1B2635EC0C87E0AD1D4 /* libPods-DPKGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DPKGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F60ED45862DC8B4B6E8FB9 /* Pods-DPKGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DPKGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DPKGame/Pods-DPKGame.debug.xcconfig"; sourceTree = "<group>"; };
 		D106DA6A1D8E3390009414A6 /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
@@ -220,6 +244,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1626311D928BE4008E3DA8 /* kernel */ = {
+			isa = PBXGroup;
+			children = (
+				1A1626321D928BE4008E3DA8 /* DPK_NW_Application.h */,
+				1A1626331D928BE4008E3DA8 /* DPK_NW_Application.m */,
+				1A1626341D928BE4008E3DA8 /* DPKTCPSocket.h */,
+				1A1626351D928BE4008E3DA8 /* DPKTCPSocket.m */,
+				1A1626361D928BE4008E3DA8 /* GameObjectModel.h */,
+				1A1626371D928BE4008E3DA8 /* GameObjectModel.m */,
+				1A1626381D928BE4008E3DA8 /* GCDAsyncSocket.h */,
+				1A1626391D928BE4008E3DA8 /* GCDAsyncSocket.m */,
+				1A16263A1D928BE4008E3DA8 /* LocalUserModel.h */,
+				1A16263B1D928BE4008E3DA8 /* LocalUserModel.m */,
+				1A16263C1D928BE4008E3DA8 /* message_command_common.h */,
+				1A16263D1D928BE4008E3DA8 /* message_command_videochat.h */,
+				1A16263E1D928BE4008E3DA8 /* message_defines_command.h */,
+				1A16263F1D928BE4008E3DA8 /* message_defines_videochat.h */,
+				1A1626401D928BE4008E3DA8 /* PaiJuInfoModel.h */,
+				1A1626411D928BE4008E3DA8 /* PaiJuInfoModel.m */,
+				1A1626421D928BE4008E3DA8 /* yc_datatypes.h */,
+				1A1626431D928BE4008E3DA8 /* yc_defines.h */,
+			);
+			path = kernel;
+			sourceTree = "<group>";
+		};
 		208A0A8DA8D51D56DF81C41B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +334,7 @@
 		D162E3EC1D84526500EF746B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1A1626311D928BE4008E3DA8 /* kernel */,
 				D162E3ED1D84526500EF746B /* Find-发现 */,
 				D162E3F11D84526500EF746B /* Globle-全局 */,
 				D162E3F21D84526500EF746B /* Lib-库 */,
@@ -823,6 +873,7 @@
 				D162E4331D84624300EF746B /* UIView+Extension.m in Sources */,
 				D106DA941D8FF02E009414A6 /* DPKFinishZhuCeViewController.m in Sources */,
 				D1E51DF41D86D7E6002CF154 /* DPKFindViewController.m in Sources */,
+				1A1626471D928BE4008E3DA8 /* GCDAsyncSocket.m in Sources */,
 				D106DA7A1D8E8A5D009414A6 /* DPKCoverButton.m in Sources */,
 				D162E4071D84526500EF746B /* AppDelegate.m in Sources */,
 				D1E51E7C1D894118002CF154 /* DPKSlider.m in Sources */,
@@ -831,29 +882,34 @@
 				D1E51DF01D86D601002CF154 /* UIImage+Common.m in Sources */,
 				D1E51DFE1D86D9B6002CF154 /* DPKItemViewCell.m in Sources */,
 				D106DA821D8EB63B009414A6 /* DPKLoginViewController.m in Sources */,
+				1A1626441D928BE4008E3DA8 /* DPK_NW_Application.m in Sources */,
 				D1E51E081D86E1AB002CF154 /* DPKXinShouCell.m in Sources */,
 				D1E51E151D87A15A002CF154 /* DPKTopViewCell.m in Sources */,
 				D1E51E191D87A38C002CF154 /* DPKNewsCell.m in Sources */,
 				D106DA861D8EE99B009414A6 /* DPKTextField.m in Sources */,
 				D162E4381D84658500EF746B /* DPKZhuyeViewController.m in Sources */,
 				D1E51E231D885266002CF154 /* DPKQuikeCell.m in Sources */,
+				1A1626491D928BE4008E3DA8 /* PaiJuInfoModel.m in Sources */,
 				D1E51E281D8856C3002CF154 /* DPKPaiJuViewController.m in Sources */,
 				D106DA8A1D8FD498009414A6 /* DPKZhuCeViewController.m in Sources */,
 				D1CD59741D816E5100DD06C7 /* main.m in Sources */,
 				D1E51E2F1D88F679002CF154 /* UIBarButtonItem+Common.m in Sources */,
 				D106DA6C1D8E3390009414A6 /* NirKxMenu.m in Sources */,
+				1A1626481D928BE4008E3DA8 /* LocalUserModel.m in Sources */,
 				D19D9F191D8D3B7E0084AE3C /* DPKGameViewController.m in Sources */,
 				D162E4221D8455BC00EF746B /* DPKMeViewController.m in Sources */,
 				D106DA8F1D8FEB6B009414A6 /* DPKGetYanZhenViewController.m in Sources */,
 				D19D9F111D8CCDD00084AE3C /* DPKChatViewController.m in Sources */,
 				D19D9F201D8D69510084AE3C /* DPKIconView.m in Sources */,
 				D106DA6F1D8E61A2009414A6 /* DPKItemView.m in Sources */,
+				1A1626451D928BE4008E3DA8 /* DPKTCPSocket.m in Sources */,
 				D1E51E801D895A22002CF154 /* DPKBottomView.m in Sources */,
 				D162E40A1D8452CE00EF746B /* DPKTabBarViewController.m in Sources */,
 				D162E41D1D8455A400EF746B /* DPKResultViewController.m in Sources */,
 				D19D9F151D8D34BE0084AE3C /* DPKChatButton.m in Sources */,
 				D1E51E1E1D87A9A8002CF154 /* DPKNewsViewController.m in Sources */,
 				D162E42D1D845FB500EF746B /* DPKNaviController.m in Sources */,
+				1A1626461D928BE4008E3DA8 /* GameObjectModel.m in Sources */,
 				D106DA721D8E709A009414A6 /* DPKItemButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

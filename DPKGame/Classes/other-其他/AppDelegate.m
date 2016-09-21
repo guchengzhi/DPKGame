@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DPKTabBarViewController.h"
+#import "DPK_NW_Application.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,11 @@
     // 创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
+    
+    //内核数据对象
+    DPK_NW_Application* dpkApp =[DPK_NW_Application sharedInstance];
+    LocalUserModel* localUserModel =dpkApp.localUserModel;
+    [localUserModel reset];
     
   DPKTabBarViewController *tabBar = [[DPKTabBarViewController alloc] init];
   
