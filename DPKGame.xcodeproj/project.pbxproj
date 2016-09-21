@@ -111,6 +111,8 @@
 		1A1626411D928BE4008E3DA8 /* PaiJuInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaiJuInfoModel.m; sourceTree = "<group>"; };
 		1A1626421D928BE4008E3DA8 /* yc_datatypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yc_datatypes.h; sourceTree = "<group>"; };
 		1A1626431D928BE4008E3DA8 /* yc_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yc_defines.h; sourceTree = "<group>"; };
+		1A16264A1D928E56008E3DA8 /* message_defines_dpkgame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = message_defines_dpkgame.h; sourceTree = "<group>"; };
+		1A16264B1D928E6A008E3DA8 /* message_command_dpkgame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = message_command_dpkgame.h; sourceTree = "<group>"; };
 		2598A1B2635EC0C87E0AD1D4 /* libPods-DPKGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DPKGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F60ED45862DC8B4B6E8FB9 /* Pods-DPKGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DPKGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DPKGame/Pods-DPKGame.debug.xcconfig"; sourceTree = "<group>"; };
 		D106DA6A1D8E3390009414A6 /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
@@ -265,6 +267,8 @@
 				1A1626411D928BE4008E3DA8 /* PaiJuInfoModel.m */,
 				1A1626421D928BE4008E3DA8 /* yc_datatypes.h */,
 				1A1626431D928BE4008E3DA8 /* yc_defines.h */,
+				1A16264A1D928E56008E3DA8 /* message_defines_dpkgame.h */,
+				1A16264B1D928E6A008E3DA8 /* message_command_dpkgame.h */,
 			);
 			path = kernel;
 			sourceTree = "<group>";

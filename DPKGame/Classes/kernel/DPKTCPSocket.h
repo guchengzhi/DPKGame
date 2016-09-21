@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GCDAsyncSocket.h"
-#import "msg_defines.h"
-#import "msg_commands.h"
+#import "message_command_command.h"
+#import "message_defines_command.h"
 
 @class DPKTCPSocket;
 
