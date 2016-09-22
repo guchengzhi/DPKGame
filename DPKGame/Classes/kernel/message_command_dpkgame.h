@@ -31,6 +31,62 @@ typedef  struct _tag_HBCMD_DPKGame_UserLogon_Resp
     
 }HBCMD_DPKGame_UserLogon_Resp_t;
 
+typedef struct _tag_HBCMD_DPKGame_ClubInfo
+{
+    
+}HBCMD_DPKGame_ClubInfo_t;
+
+typedef struct _tag_HBCMD_DPKGame_GameInfo
+{
+    
+}HBCMD_DPKGame_GameInfo_t;
+
+typedef struct _tag_HBCMD_DPKGame_ClubUserInfo
+{
+    
+}HBCMD_DPKGame_ClubUserInfo_t;
+
+typedef struct _tag_HBCMD_DPKGame_GameUserInfo
+{
+    
+}HBCMD_DPKGame_GameUserInfo_t;
+
+typedef struct _tag_HBCMD_DPKGame_CreateClub_Req
+{
+    
+}HBCMD_DPKGame_CreateClub_Req_t;
+
+typedef struct _tag_HBCMD_DPKGame_CreateClub_Resp
+{
+    
+}HBCMD_DPKGame_CreateClub_Resp_t;
+
+typedef struct _tag_HBCMD_DPKGame_DelClub_Req
+{
+    
+}HBCMD_DPKGame_DelClub_Req_t;
+
+typedef struct _tag_HBCMD_DPKGame_DelClub_Resp
+{
+    
+}HBCMD_DPKGame_DelClub_Resp_t;
+
+typedef struct _tag_HBCMD_DPKGame_CreateGame_Req
+{
+    
+}HBCMD_DPKGame_CreateGame_Req_t;
+
+typedef struct _tag_HBCMD_DPKGame_CreateGame_Resp
+{
+    
+}HBCMD_DPKGame_CreateGame_Resp_t;
+
+
+
+
+
+
+
 
 #pragma pack()
 //////////////////////////////////////////////////////////////////////////
