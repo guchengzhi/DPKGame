@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCellId" rowHeight="98" id="KGk-i7-Jjw" customClass="DPKKaiJuChatCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="record_touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-Gd-DrT">
+                        <rect key="frame" x="265" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="6Vh-yn-dJt"/>
+                            <constraint firstAttribute="width" constant="40" id="CBd-Bm-ssP"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0I-tt-4go" customClass="DPKKaiJuChatButton">
+                        <rect key="frame" x="15" y="18" width="249" height="71.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" backgroundImage="chat_kaiju_right_normal">
+                            <string key="title">    已结束
+点击查看战绩</string>
+                        </state>
+                        <state key="highlighted" backgroundImage="chat_kaiju_right_press"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-OF-tUl">
+                        <rect key="frame" x="133" y="59" width="76" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="Pr0-Vc-wi9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="30分钟" image="session_shijian"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znJ-iF-vvn">
+                        <rect key="frame" x="36" y="59" width="55" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="e3l-Af-IbM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="13" maxY="0.0"/>
+                        <state key="normal" title="1/2" image="record_chouma"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="让她知道的牌局8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-U6-eoP">
+                        <rect key="frame" x="36" y="27" width="92" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_kaiju_puke" translatesAutoresizingMaskIntoConstraints="NO" id="tSG-Iq-fHO">
+                        <rect key="frame" x="220" y="48" width="37" height="34"/>
+                    </imageView>
+                    <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fy1-7m-GXD">
+                        <rect key="frame" x="30" y="46" width="219" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="2bb-gD-cOb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tSG-Iq-fHO" firstAttribute="bottom" secondItem="I0I-tt-4go" secondAttribute="bottom" constant="-8" id="1wT-F4-aty"/>
+                    <constraint firstItem="2Rd-Gd-DrT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2I7-A1-E3Y"/>
+                    <constraint firstItem="4rD-OF-tUl" firstAttribute="centerY" secondItem="znJ-iF-vvn" secondAttribute="centerY" id="5t6-IV-efF"/>
+                    <constraint firstItem="fy1-7m-GXD" firstAttribute="leading" secondItem="I0I-tt-4go" secondAttribute="leading" constant="15" id="9Da-UW-cF6"/>
+                    <constraint firstItem="I0I-tt-4go" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="DKa-pE-Ruw"/>
+                    <constraint firstItem="fy1-7m-GXD" firstAttribute="top" secondItem="I0I-tt-4go" secondAttribute="top" constant="28" id="Hoa-qv-nKi"/>
+                    <constraint firstItem="znJ-iF-vvn" firstAttribute="leading" secondItem="nbx-U6-eoP" secondAttribute="leading" id="LUG-mH-bXZ"/>
+                    <constraint firstItem="tSG-Iq-fHO" firstAttribute="leading" secondItem="4rD-OF-tUl" secondAttribute="trailing" constant="11" id="X4J-a7-kz3"/>
+                    <constraint firstItem="nbx-U6-eoP" firstAttribute="leading" secondItem="I0I-tt-4go" secondAttribute="leading" constant="21" id="YqK-HC-A3t"/>
+                    <constraint firstItem="2Rd-Gd-DrT" firstAttribute="leading" secondItem="I0I-tt-4go" secondAttribute="trailing" constant="1" id="dLY-ba-ygk"/>
+                    <constraint firstAttribute="trailing" secondItem="2Rd-Gd-DrT" secondAttribute="trailing" constant="15" id="dec-Tj-upk"/>
+                    <constraint firstItem="I0I-tt-4go" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gQg-1s-Fxk"/>
+                    <constraint firstItem="znJ-iF-vvn" firstAttribute="bottom" secondItem="I0I-tt-4go" secondAttribute="bottom" constant="-14" id="h8f-Ug-gcc"/>
+                    <constraint firstAttribute="bottom" secondItem="I0I-tt-4go" secondAttribute="bottom" constant="8" id="hTe-Fz-rzj"/>
+                    <constraint firstItem="nbx-U6-eoP" firstAttribute="top" secondItem="I0I-tt-4go" secondAttribute="top" constant="9" id="lJi-C3-KCs"/>
+                    <constraint firstItem="fy1-7m-GXD" firstAttribute="trailing" secondItem="I0I-tt-4go" secondAttribute="trailing" constant="-15" id="sIV-jX-epe"/>
+                    <constraint firstItem="tSG-Iq-fHO" firstAttribute="trailing" secondItem="I0I-tt-4go" secondAttribute="trailing" constant="-7" id="sdy-xE-Xkx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="chouMaLab" destination="znJ-iF-vvn" id="c6z-Zw-0a1"/>
+                <outlet property="paiJuName" destination="nbx-U6-eoP" id="jpX-Di-Icg"/>
+                <outlet property="paiJuTime" destination="4rD-OF-tUl" id="Paf-8Y-hi6"/>
+            </connections>
+            <point key="canvasLocation" x="239" y="316"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_kaiju_puke" width="37" height="34"/>
+        <image name="chat_kaiju_right_normal" width="101" height="65"/>
+        <image name="chat_kaiju_right_press" width="101" height="65"/>
+        <image name="record_chouma" width="14" height="14"/>
+        <image name="record_touxiang" width="40" height="40"/>
+        <image name="session_shijian" width="12" height="12"/>
+    </resources>
+</document>

@@ -9,8 +9,9 @@
 #import "DPKNewsViewController.h"
 #import "DPKTopViewCell.h"
 #import "DPKNewsCell.h"
+#import "DPKJuLeBuTableViewController.h"
 
-@interface DPKNewsViewController ()
+@interface DPKNewsViewController ()<DPKTopViewCellDelegate>
 
 @end
  static NSString *newsCellId = @"newsCell";
@@ -65,6 +66,7 @@ static NSString *topCellId = @"topCell";
    
     if (indexPath.section == 0 ) {
         DPKTopViewCell *cell = [tableView dequeueReusableCellWithIdentifier:topCellId];
+        cell.delegate = self;
         return cell;
     }else {
         DPKNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:newsCellId];
@@ -72,6 +74,31 @@ static NSString *topCellId = @"topCell";
         return cell;
     }
    
+}
+
+#pragma mark --DPKTopViewCellDelegate
+- (void)topViewCell:(DPKTopViewCell *)cell didDPKButtonType:(DPKButtonType)type {
+    switch (type) {
+        case DPKButtonTypeXinFriendBtn:{//新朋友
+            
+        }
+            
+            break;
+            
+        case DPKButtonTypeGoodFriendBtn:{//好友
+            
+        }
+            break;
+        case DPKButtonTypeJuLeBuBtn:{//俱乐部
+            
+            DPKJuLeBuTableViewController *juLeBuVc = [[DPKJuLeBuTableViewController alloc]init];
+            [self.navigationController pushViewController:juLeBuVc animated:YES];
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

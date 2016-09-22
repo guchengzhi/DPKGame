@@ -62,11 +62,13 @@
         [self.bgImageView addSubview:meBtn];
         if (i == 1) {
             UIImage *img = [UIImage imageNamed:@"weikaifang"];
-            UIImageView *iv = [[UIImageView alloc]initWithImage:img];
+            UIImageView *iv = [[UIImageView alloc]init];
+            iv.width = 44;
+            iv.height = 47;
+            iv.image = img;
             [self.bgImageView addSubview:iv];
-             iv.center = meBtn.center;
            iv.x = btnW*2 - iv.width;
-          ;
+            iv.y = CGRectGetMaxY(self.topImageView.frame);
             
             
            

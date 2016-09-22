@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DPKPaiJuModel;
+typedef void(^PaiJuBlock)(DPKPaiJuModel *paiJuModel);
 
 @interface DPKPaiJuViewController : UITableViewController
+
+@property (nonatomic,copy) PaiJuBlock block;
+
+/**样式*/
+@property (nonatomic,strong) NSString *type;
 
 @end

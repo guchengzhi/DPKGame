@@ -11,6 +11,9 @@
 #import "NirKxMenu.h"
 #import "DPKItemView.h"
 #import "DPKRightViewController.h"
+#import "DPKZhuyeViewController.h"
+#import "DPKTabBarViewController.h"
+#import "DPKNaviController.h"
 
 @interface DPKGameViewController ()<DPKItemViewDelegate>
 
@@ -148,7 +151,11 @@
             break;
         case DPKItemButtonTypeFanHui:{//返回大厅
             
+      
             [self dismissViewControllerAnimated:YES completion:nil];
+         
+            
+           
         }
             break;
         case DPKItemButtonTypeExitPaiJu:{//退出牌局
@@ -159,6 +166,7 @@
         
     }
 }
+
 
 
 

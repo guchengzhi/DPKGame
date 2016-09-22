@@ -11,6 +11,7 @@
 #import "DPKSlider.h"
 #import "DPKChatViewController.h"
 #import "DPKTabBarViewController.h"
+#import "DPKPaiJuModel.h"
 
 @interface DPKPaiJuViewController ()<DPKBottomViewDelegate>
 
@@ -32,6 +33,12 @@
 
 //牌局的名字
 @property (weak, nonatomic) IBOutlet UITextField *paiJuName;
+
+/**筹码*/
+@property (weak, nonatomic) IBOutlet UILabel *chouMaLab;
+
+///**牌局创建的时长*/
+//@property (nonatomic,strong) NSString *time;
 
 
 @end
@@ -82,8 +89,18 @@
     //设置未划过的颜色
     [self.slider setMaximumTrackImage:[UIImage imageNamed:@"chouma01"] forState:UIControlStateNormal];
     
+    //添加点击手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(exitKeyBorad)];
+    tap.cancelsTouchesInView = NO;
     
+    [self.tableView addGestureRecognizer:tap];
 }
+
+#pragma mark -- 点击手势退出键盘
+- (void)exitKeyBorad {
+    [self.view endEditing:YES];
+}
+
 
 
 - (IBAction)switchButton:(UIButton *)sender {
@@ -176,15 +193,33 @@
 
 #pragma  mark -- 点击开始的代理方法
 - (void)bottomView:(DPKBottomView *)bottomView selectedTimeStr:(NSString *)timeStr {
-    DPKLog(@"%@",timeStr);
+ 
+    if ([self.type isEqualToString:DPKJuLeBu] && self.block) {
+        
+        //创建模型
+        DPKPaiJuModel *paiJuModel = [[DPKPaiJuModel alloc]init];
+        paiJuModel.paiJuTime = timeStr;
+        paiJuModel.paiJuName = self.paiJuName.text;
+        paiJuModel.paiJuChouMa = self.chouMaLab.text;
+        
+        [self clickButton];
+        self.block(paiJuModel);
+        
+        
+        
+    }else {
+        
+        DPKChatViewController *chatVc = [[DPKChatViewController alloc]init];
+        chatVc.title = self.paiJuName.text;
+        DPKTabBarViewController *tabbar = (DPKTabBarViewController *)self.presentingViewController;
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [tabbar.selectedViewController  pushViewController:chatVc animated:YES];
+    }
     
-    DPKChatViewController *chatVc = [[DPKChatViewController alloc]init];
-    chatVc.title = self.paiJuName.text;
-    DPKTabBarViewController *tabbar = (DPKTabBarViewController *)self.presentingViewController;
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [tabbar.selectedViewController  pushViewController:chatVc animated:YES];
+   
     
-    DPKLog(@"%@----------%@",self.presentationController,self.presentingViewController);
+   
    
 }
 
