@@ -16,6 +16,16 @@ typedef enum {
     
 }DPKButtonType;
 
+@class DPKTopViewCell;
+@protocol DPKTopViewCellDelegate <NSObject>
+
+- (void)topViewCell:(DPKTopViewCell *)cell didDPKButtonType:(DPKButtonType)type;
+
+@end
+
 @interface DPKTopViewCell : UITableViewCell
+
+@property (nonatomic,assign) id<DPKTopViewCellDelegate>delegate;
+
 
 @end

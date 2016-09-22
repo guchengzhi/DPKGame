@@ -11,6 +11,7 @@
                 <outlet property="cell2" destination="Met-pZ-9JN" id="6hv-NC-OpG"/>
                 <outlet property="cell4" destination="fYL-lc-Lui" id="d2H-eC-wxA"/>
                 <outlet property="cell5" destination="5SM-wi-fDI" id="mr5-Fv-RWD"/>
+                <outlet property="chouMaLab" destination="6zY-MI-14x" id="65Z-UM-MZQ"/>
                 <outlet property="paiJuName" destination="vSs-Ed-QJf" id="z7q-Er-9n9"/>
                 <outlet property="selButton" destination="9GA-gp-MlF" id="DIe-sS-KQE"/>
                 <outlet property="slider" destination="fG0-o4-Gyc" id="Ms6-5D-rb5"/>

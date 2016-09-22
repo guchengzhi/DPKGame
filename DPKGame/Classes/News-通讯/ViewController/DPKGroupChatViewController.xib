@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DPKGroupChatViewController">
+            <connections>
+                <outlet property="bottomConstant" destination="x9x-nz-Y50" id="5cq-mf-BbV"/>
+                <outlet property="tableView" destination="CfS-ut-2Fm" id="ulI-7Z-rtT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3r-yu-bk4">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入消息" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IsB-kf-cAG">
+                            <rect key="frame" x="70" y="7" width="163" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="2yR-jW-D2N"/>
+                                <constraint firstAttribute="width" constant="163" id="lth-SS-c6I"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YE-F5-mhx">
+                            <rect key="frame" x="274" y="7" width="30" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="0.51374897200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="4YE-F5-mhx" firstAttribute="centerY" secondItem="IsB-kf-cAG" secondAttribute="centerY" id="F0M-Ur-NqW"/>
+                        <constraint firstItem="IsB-kf-cAG" firstAttribute="centerY" secondItem="S3r-yu-bk4" secondAttribute="centerY" id="W5Z-bY-EOf"/>
+                        <constraint firstItem="IsB-kf-cAG" firstAttribute="leading" secondItem="S3r-yu-bk4" secondAttribute="leading" constant="70" id="hQv-dk-52O"/>
+                        <constraint firstAttribute="trailing" secondItem="4YE-F5-mhx" secondAttribute="trailing" constant="16" id="q4f-H2-65F"/>
+                        <constraint firstAttribute="height" constant="44" id="rr1-zZ-VFI"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CfS-ut-2Fm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HLU-LD-MaC"/>
+                        <outlet property="delegate" destination="-1" id="1pS-vX-0S9"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CfS-ut-2Fm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TxA-zI-IbU"/>
+                <constraint firstAttribute="trailing" secondItem="S3r-yu-bk4" secondAttribute="trailing" id="Ycn-1t-ANC"/>
+                <constraint firstItem="S3r-yu-bk4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZPL-Pu-IJp"/>
+                <constraint firstItem="S3r-yu-bk4" firstAttribute="top" secondItem="CfS-ut-2Fm" secondAttribute="bottom" id="c5p-rq-ZWb"/>
+                <constraint firstItem="CfS-ut-2Fm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e2n-87-fKa"/>
+                <constraint firstAttribute="trailing" secondItem="CfS-ut-2Fm" secondAttribute="trailing" id="tuS-pD-O45"/>
+                <constraint firstAttribute="bottom" secondItem="S3r-yu-bk4" secondAttribute="bottom" id="x9x-nz-Y50"/>
+            </constraints>
+            <point key="canvasLocation" x="279" y="349"/>
+        </view>
+    </objects>
+</document>

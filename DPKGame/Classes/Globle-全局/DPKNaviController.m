@@ -49,6 +49,7 @@
         UIButton *btn = [[UIButton alloc]init];
         // btn.backgroundColor = [UIColor redColor];
         [btn setTitle:@"返回" forState:UIControlStateNormal];
+        btn.titleLabel.font =[UIFont systemFontOfSize:16];
         [btn setImage:[UIImage imageNamed:@"nav_backImage"] forState:UIControlStateNormal];
         //[btn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
         btn.size = CGSizeMake(70, 20);

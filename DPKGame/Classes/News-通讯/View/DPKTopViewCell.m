@@ -58,6 +58,16 @@
 }
 
 
+#pragma mark -- 点击按钮
+- (void)clcikItemButton:(DPKButton *)btn {
+    
+    if ([self.delegate respondsToSelector:@selector(topViewCell:didDPKButtonType:)]) {
+        [self.delegate topViewCell:self didDPKButtonType:btn.tag];
+    }
+    
+}
+
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGFloat btnW = 60;

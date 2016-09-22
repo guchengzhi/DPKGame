@@ -75,7 +75,10 @@
     
     DPKGameViewController *gameVc = [[DPKGameViewController alloc]init];
     
-    [self presentViewController:gameVc animated:YES completion:nil];
+     [self presentViewController:gameVc animated:YES completion:nil];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+   
     
 }
 

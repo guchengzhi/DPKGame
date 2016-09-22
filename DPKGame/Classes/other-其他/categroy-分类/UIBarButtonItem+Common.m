@@ -60,9 +60,9 @@
     [btn setTitle:title forState:UIControlStateNormal];
     btn.frame=CGRectMake(0, 0, 60, 44);
     
-    btn.titleLabel.font=[UIFont boldSystemFontOfSize:14];
+    btn.titleLabel.font=[UIFont boldSystemFontOfSize:16];
     btn.titleLabel.textAlignment=NSTextAlignmentRight;
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn setTitleColor:DPKGRGBColor(171, 122, 49) forState:UIControlStateNormal];
     [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
     
     [btn addTarget:target
