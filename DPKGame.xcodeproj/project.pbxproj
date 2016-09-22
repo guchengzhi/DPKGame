@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A1626441D928BE4008E3DA8 /* DPK_NW_Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626331D928BE4008E3DA8 /* DPK_NW_Application.m */; };
 		1A1626451D928BE4008E3DA8 /* DPKTCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626351D928BE4008E3DA8 /* DPKTCPSocket.m */; };
-		1A1626461D928BE4008E3DA8 /* GameObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626371D928BE4008E3DA8 /* GameObjectModel.m */; };
 		1A1626471D928BE4008E3DA8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626391D928BE4008E3DA8 /* GCDAsyncSocket.m */; };
-		1A1626481D928BE4008E3DA8 /* LocalUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A16263B1D928BE4008E3DA8 /* LocalUserModel.m */; };
 		1A1626491D928BE4008E3DA8 /* PaiJuInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626411D928BE4008E3DA8 /* PaiJuInfoModel.m */; };
+		1A98DB3B1D93BD5600AB604A /* DPK_NW_Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626331D928BE4008E3DA8 /* DPK_NW_Application.m */; };
+		1A98DB3C1D93BD9E00AB604A /* LocalUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A16263B1D928BE4008E3DA8 /* LocalUserModel.m */; };
+		1A98DB3D1D93BDB200AB604A /* GameObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1626371D928BE4008E3DA8 /* GameObjectModel.m */; };
 		8613A7FB04527E5500EECC55 /* libPods-DPKGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2598A1B2635EC0C87E0AD1D4 /* libPods-DPKGame.a */; };
 		D106DA6C1D8E3390009414A6 /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA6B1D8E3390009414A6 /* NirKxMenu.m */; };
 		D106DA6F1D8E61A2009414A6 /* DPKItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA6E1D8E61A2009414A6 /* DPKItemView.m */; };
@@ -951,6 +951,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A98DB3D1D93BDB200AB604A /* GameObjectModel.m in Sources */,
+				1A98DB3C1D93BD9E00AB604A /* LocalUserModel.m in Sources */,
+				1A98DB3B1D93BD5600AB604A /* DPK_NW_Application.m in Sources */,
 				D1E51E141D87A15A002CF154 /* DPKButton.m in Sources */,
 				D106DA761D8E7EEC009414A6 /* DPKRightViewController.m in Sources */,
 				D162E4331D84624300EF746B /* UIView+Extension.m in Sources */,

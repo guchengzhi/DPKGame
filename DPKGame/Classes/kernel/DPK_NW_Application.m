@@ -26,7 +26,7 @@ static DPK_NW_Application* DPKApp_ShareObj =nil;
     return DPKApp_ShareObj;
 }
 
--(void) destoryInstance {
++(void) destoryInstance {
     //nothing abcd
 }
 
