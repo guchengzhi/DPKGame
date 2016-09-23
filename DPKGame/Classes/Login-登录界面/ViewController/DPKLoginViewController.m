@@ -10,22 +10,40 @@
 #import "DPKTextField.h"
 #import "DPKZhuCeViewController.h"
 #import "DPKNaviController.h"
+#import "AppDelegate.h"
+#import "DPK_NW_Application.h"
+#import <MBProgressHUD.h>
+#include "NSString+Common.h"
 
 @interface DPKLoginViewController ()
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak,nonatomic) DPKTextField *pwdTextFiled;
+@property (weak, nonatomic) DPKTextField *nameTextFiled;
 
 @end
 
 @implementation DPKLoginViewController
 
 - (void)viewDidLoad {
+    NSLog(@"DPKLoginViewController::viewDidLoad()");
+    
     [super viewDidLoad];
     
     //添加基本的视图
     [self setBasicView];
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"DPKLoginViewController::viewWillDisappear()");
+}
+
+-(void)dealloc{
+    NSLog(@"DPKLoginViewController:dealloc()");
 }
 
 #pragma mark -- 创建基本的视图
@@ -50,8 +68,6 @@
     addressLab.textColor = [UIColor whiteColor];
     [self.scrollView addSubview:addressLab];
     
-    
-
     //创建textFiled
     DPKTextField *nameTextFiled = [[DPKTextField alloc]init];
     nameTextFiled.background = [UIImage imageNamed:@"denglu_shurukuang"];
@@ -65,7 +81,7 @@
     [nameTextFiled setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
 
     [self.scrollView addSubview:nameTextFiled];
-    
+    self.nameTextFiled = nameTextFiled;
     
     DPKTextField *pwdTextFiled = [[DPKTextField alloc]init];
     pwdTextFiled.background = [UIImage imageNamed:@"denglu_shurukuang"];
@@ -81,6 +97,7 @@
     [pwdTextFiled setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     //pwdTextFiled.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self.scrollView addSubview:pwdTextFiled];
+    self.pwdTextFiled = pwdTextFiled;
     
     //创建按钮
     UIButton *btn = [[UIButton alloc] init];
@@ -88,6 +105,7 @@
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:14];
     [btn setBackgroundImage:[UIImage imageNamed:@"denglu_denglu_normal"] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(onBtnLogon) forControlEvents:UIControlEventTouchUpInside];
     
     btn.width = 270;
     btn.y = CGRectGetMaxY(pwdTextFiled.frame) + 40;
@@ -130,6 +148,38 @@
     DPKNaviController *naviVc = [[DPKNaviController alloc]initWithRootViewController:zhuCeVc];
     
     [self presentViewController:naviVc animated:YES completion:nil];
+}
+
+#pragma mark --点击登录
+-(void)onBtnLogon {
+    
+    NSString* strUserLogonName = self.nameTextFiled.text;
+    NSString* strUserLogonPwd = self.pwdTextFiled.text;
+    if([strUserLogonName length] == 0 || [strUserLogonPwd length] == 0)
+    {
+        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"账号或密码不能为空" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil];
+        [alter show];
+        return;
+    }
+    
+    strUserLogonName = [NSString md5:strUserLogonName];
+    strUserLogonPwd =[NSString md5:strUserLogonPwd];
+    
+    const char* account = (const char*)[strUserLogonName cStringUsingEncoding:NSASCIIStringEncoding];
+    const char* pwd = (const char*)[strUserLogonPwd cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    AppDelegate* delegate =(AppDelegate*)([UIApplication sharedApplication].delegate);
+    [delegate do_userLogon:1 UserLogonName:account UserLogonPwd:pwd];
+
+    //直接返回首页
+    //test code
+    //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    //[userDefaults setBool:YES forKey:@"isLogin"];
+    //[userDefaults synchronize];
+    //重新选择大厅页面
+    //AppDelegate* delegate =(AppDelegate*)([UIApplication sharedApplication].delegate);
+    //[delegate appNewSetup];
+
 }
 
 - (void)didReceiveMemoryWarning {

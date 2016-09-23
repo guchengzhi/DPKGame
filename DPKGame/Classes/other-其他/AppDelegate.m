@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 #import "DPKTabBarViewController.h"
+#import "DPKLoginViewController.h"
 #import "DPK_NW_Application.h"
+
+#import "message_command_common.h"
+#import "message_defines_command.h"
+#import "message_command_dpkgame.h"
+#import "message_defines_dpkgame.h"
 
 @interface AppDelegate ()
 
@@ -18,27 +24,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 创建窗口
-    self.window = [[UIWindow alloc] init];
-    self.window.frame = [UIScreen mainScreen].bounds;
-    
-    //内核数据对象
-    DPK_NW_Application* dpkApp =[DPK_NW_Application sharedInstance];
-    LocalUserModel* localUserModel =dpkApp.localUserModel;
-    [localUserModel reset];
-    
-  DPKTabBarViewController *tabBar = [[DPKTabBarViewController alloc] init];
-  
-    // 设置窗口的根控制器
-    self.window.rootViewController = tabBar;
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
-    // 显示窗口
-    [self.window makeKeyAndVisible];
+    _logonSocketHandler = [[DPKLogonSocketHandler alloc] init];
+    
+    //test code
+    //清零用户信息
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:NO forKey:@"isLogin"];
+    [userDefaults synchronize];
+
+    [self appNewSetup];
     return YES;
-    
-    
 }
 
 
@@ -63,6 +61,57 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void) appNewSetup {
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL isLogin = [userDefaults boolForKey:@"isLogin"];
+    
+    NSLog(@"application:appNewSetup() isLogin=%d", isLogin);
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    //内核数据对象
+    DPK_NW_Application* dpkApp =[DPK_NW_Application sharedInstance];
+    LocalUserModel* localUserModel =dpkApp.localUserModel;
+    [localUserModel reset];
+    
+    //是否已经登录
+    if(!isLogin) {
+        DPKLoginViewController *loginVc = [[DPKLoginViewController alloc]init];
+        // 设置窗口的根控制器
+        self.window.rootViewController = loginVc;
+    }
+    else {
+        DPKTabBarViewController *tabBar = [[DPKTabBarViewController alloc] init];
+        // 设置窗口的根控制器
+        self.window.rootViewController = tabBar;
+        
+    }
+}
+
+-(void)do_userLogon:(int)isOpenLogonWnd
+      UserLogonName:(const char*)userLogonName
+       UserLogonPwd:(const char*)userLogonPwd
+{
+    DPK_NW_Application* dpkApp =[DPK_NW_Application sharedInstance];
+    dpkApp.isOpenLogonWnd =isOpenLogonWnd;
+    [dpkApp SetLogonEventSink:_logonSocketHandler];
+    
+    //设置临时登录信息
+    TempUserLogonInfo_t* tempUserLogonInfo = [dpkApp GetTempUserLogonInfo];
+    memset(tempUserLogonInfo, 0, sizeof(TempUserLogonInfo_t));
+    tempUserLogonInfo->userId = 0;
+    strcpy(tempUserLogonInfo->userLogonName,userLogonName);
+    strcpy(tempUserLogonInfo->userLogonPwd, userLogonPwd);
+    tempUserLogonInfo->bIsForceLogon = 1;
+    tempUserLogonInfo->bIsMobile = 1;
+    tempUserLogonInfo->maskCode = time(0);
+    //连接登录服务器
+    [dpkApp.logonSocket CloseSocket:0];
+    [dpkApp.logonSocket ConnectServer:@"127.0.0.1" ServerPort:3301];
+    
 }
 
 @end
