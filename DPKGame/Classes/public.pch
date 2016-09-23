@@ -12,6 +12,8 @@
 #import "UIView+Extension.h"
 #import "UIImage+Common.h"
 #import "UIBarButtonItem+Common.h"
+#import "NSString+Common.h"
+
 
 #import "DPKConst.h"
 

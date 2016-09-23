@@ -12,9 +12,8 @@
 #import "DPKNaviController.h"
 #import "AppDelegate.h"
 #import "DPK_NW_Application.h"
-#import <MBProgressHUD.h>
-#include "NSString+Common.h"
 #import <SVProgressHUD.h>
+
 
 @interface DPKLoginViewController ()
 
@@ -163,7 +162,6 @@
         return;
     }
     
-    strUserLogonName = [NSString md5:strUserLogonName];
     strUserLogonPwd =[NSString md5:strUserLogonPwd];
     
     const char* account = (const char*)[strUserLogonName cStringUsingEncoding:NSASCIIStringEncoding];
