@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //1111
+    NSLog(@"DPKFindViewController::viewDidLoad()");
    
     
     //加载背景图
@@ -37,13 +37,28 @@
     
     self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0);
     
+    //如果用户没有登录，则显示登录按钮
+    //test code
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL isLogin = [userDefaults boolForKey:@"isLogin"];
+    if(!isLogin) {
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem getRightUIBarButtonItem:@"登录" target:self action:@selector(login)];
+    }
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"DPKFindViewController:viewWillDisappear()");
+}
+
+-(void)dealloc{
+    NSLog(@"DPKFindViewController:dealloc()");
 }
 
 - (void)login {
     DPKLoginViewController *loginVc = [[DPKLoginViewController alloc]init];
-    
     [self presentViewController:loginVc animated:YES completion:nil];
 }
 

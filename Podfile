@@ -6,6 +6,7 @@ project 'DPKGame.xcodeproj'
 
 target :DPKGame do
 
+pod 'SVProgressHUD’
 pod 'AFNetworking', '~> 2.5'
 pod 'MBProgressHUD', '~> 0.8'
 pod 'SDWebImage', '~> 3.5.2'

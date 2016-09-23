@@ -14,6 +14,7 @@ typedef struct _tag_HBCMD_VideoChat_UserLogon_Req
 	uint32  maskCode;
 	char    userPwd[PWDLEN];
 	uint8   isMobile;
+    int8    isForceLogon;
 }HBCMD_VideoChat_UserLogon_Req_t;
 
 typedef struct _tag_HBCMD_VideoChat_UserLogon_Resp

@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPKLoginViewController.h"
+#import "DPKLogonSocketHandler.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) DPKLogonSocketHandler* logonSocketHandler;
 
+-(void)appNewSetup;
+-(void)do_userLogon:(int)isOpenLogonWnd
+      UserLogonName:(const char*)userLogonName
+       UserLogonPwd:(const char*)userLogonPwd;
 
 @end
 
