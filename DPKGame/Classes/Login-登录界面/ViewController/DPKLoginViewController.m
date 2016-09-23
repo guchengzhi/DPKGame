@@ -162,7 +162,6 @@
         return;
     }
     
-    strUserLogonName = [NSString md5:strUserLogonName];
     strUserLogonPwd =[NSString md5:strUserLogonPwd];
     
     const char* account = (const char*)[strUserLogonName cStringUsingEncoding:NSASCIIStringEncoding];
