@@ -12,8 +12,8 @@
 #import "DPKNaviController.h"
 #import "AppDelegate.h"
 #import "DPK_NW_Application.h"
-#import <MBProgressHUD.h>
-#include "NSString+Common.h"
+#import "NSString+Common.h"
+
 
 @interface DPKLoginViewController ()
 
