@@ -8,6 +8,7 @@
 
 #import "DPKMeViewController.h"
 #import "DPKMeButton.h"
+#import "DPKSettingTableViewController.h"
 
 @interface DPKMeViewController ()
 
@@ -47,7 +48,8 @@
         //meBtn.backgroundColor = [UIColor redColor];
         [meBtn setTitle:titleArr[i] forState:UIControlStateNormal];
         [meBtn setImage:[UIImage imageNamed:picArr[i]] forState:UIControlStateNormal];
-        
+        [meBtn addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+        meBtn.tag = i;
      
         //计算frame
         NSInteger col = i % maxCols;
@@ -83,7 +85,13 @@
     
 }
 
-
+- (void)clickButton:(UIButton *)btn {
+    if (btn.tag == 5) {
+        DPKSettingTableViewController *setVc = [[DPKSettingTableViewController alloc]init];
+        [self.navigationController pushViewController:setVc animated:YES];
+    }
+   
+}
 
 /*
 #pragma mark - Navigation

@@ -142,7 +142,7 @@
                     <constraint firstItem="Qr8-8C-kzh" firstAttribute="leading" secondItem="53d-bu-QGc" secondAttribute="trailing" constant="5" id="hOY-QW-BK5"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.073687435500516013" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.074509803921568626" green="0.094117647058823528" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="-44" y="275.5"/>
         </tableViewCell>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="82" id="92D-SA-Wem">

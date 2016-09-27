@@ -32,6 +32,8 @@
 		D106DA901D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA8E1D8FEB6B009414A6 /* DPKGetYanZhenViewController.xib */; };
 		D106DA941D8FF02E009414A6 /* DPKFinishZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106DA921D8FF02E009414A6 /* DPKFinishZhuCeViewController.m */; };
 		D106DA951D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106DA931D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib */; };
+		D155EB591D982435002EBFF8 /* DPKSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D155EB571D982435002EBFF8 /* DPKSettingTableViewController.m */; };
+		D155EB5A1D982435002EBFF8 /* DPKSettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D155EB581D982435002EBFF8 /* DPKSettingTableViewController.xib */; };
 		D162E4071D84526500EF746B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D162E3FD1D84526500EF746B /* AppDelegate.m */; };
 		D162E40A1D8452CE00EF746B /* DPKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162E4091D8452CE00EF746B /* DPKTabBarViewController.m */; };
 		D162E41D1D8455A400EF746B /* DPKResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D162E41B1D8455A400EF746B /* DPKResultViewController.m */; };
@@ -166,6 +168,9 @@
 		D106DA911D8FF02E009414A6 /* DPKFinishZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKFinishZhuCeViewController.h; sourceTree = "<group>"; };
 		D106DA921D8FF02E009414A6 /* DPKFinishZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKFinishZhuCeViewController.m; sourceTree = "<group>"; };
 		D106DA931D8FF02E009414A6 /* DPKFinishZhuCeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKFinishZhuCeViewController.xib; sourceTree = "<group>"; };
+		D155EB561D982435002EBFF8 /* DPKSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKSettingTableViewController.h; sourceTree = "<group>"; };
+		D155EB571D982435002EBFF8 /* DPKSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPKSettingTableViewController.m; sourceTree = "<group>"; };
+		D155EB581D982435002EBFF8 /* DPKSettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPKSettingTableViewController.xib; sourceTree = "<group>"; };
 		D162E3FC1D84526500EF746B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D162E3FD1D84526500EF746B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D162E4081D8452CE00EF746B /* DPKTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPKTabBarViewController.h; sourceTree = "<group>"; };
@@ -394,10 +399,10 @@
 		D162E3EC1D84526500EF746B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D162E3F21D84526500EF746B /* Lib-库 */,
 				1A1626311D928BE4008E3DA8 /* kernel */,
 				D162E3ED1D84526500EF746B /* Find-发现 */,
 				D162E3F11D84526500EF746B /* Globle-全局 */,
-				D162E3F21D84526500EF746B /* Lib-库 */,
 				D162E3F31D84526500EF746B /* Me-我 */,
 				D162E3F71D84526500EF746B /* News-通讯 */,
 				D162E3FB1D84526500EF746B /* other-其他 */,
@@ -501,6 +506,9 @@
 				D162E41F1D8455BC00EF746B /* DPKMeViewController.h */,
 				D162E4201D8455BC00EF746B /* DPKMeViewController.m */,
 				D162E4211D8455BC00EF746B /* DPKMeViewController.xib */,
+				D155EB561D982435002EBFF8 /* DPKSettingTableViewController.h */,
+				D155EB571D982435002EBFF8 /* DPKSettingTableViewController.m */,
+				D155EB581D982435002EBFF8 /* DPKSettingTableViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -877,6 +885,7 @@
 				D19D9F221D8D69630084AE3C /* DPKIconView.xib in Resources */,
 				D1E51E1F1D87A9A8002CF154 /* DPKNewsViewController.xib in Resources */,
 				D1A8AFAA1D928A4800B57611 /* DPKKaiJuChatCell.xib in Resources */,
+				D155EB5A1D982435002EBFF8 /* DPKSettingTableViewController.xib in Resources */,
 				D1A8AFB81D92C5A900B57611 /* DPKPaiJuManageViewController.xib in Resources */,
 				D1A8AFBD1D92D00700B57611 /* DPKPaiJuView.xib in Resources */,
 				D162E4391D84658500EF746B /* DPKZhuyeViewController.xib in Resources */,
@@ -1001,6 +1010,7 @@
 				D1CD59741D816E5100DD06C7 /* main.m in Sources */,
 				D1E51E2F1D88F679002CF154 /* UIBarButtonItem+Common.m in Sources */,
 				D106DA6C1D8E3390009414A6 /* NirKxMenu.m in Sources */,
+				D155EB591D982435002EBFF8 /* DPKSettingTableViewController.m in Sources */,
 				D1A8AFB01D92B47700B57611 /* DPKConst.m in Sources */,
 				D19D9F191D8D3B7E0084AE3C /* DPKGameViewController.m in Sources */,
 				D1A8AFA51D92855D00B57611 /* DPKStartButton.m in Sources */,
